@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(255, 252, 252);
+  /* overflow: hidden; */
+
+
+}
+
+/* pseudo-element for background */
+body {
+  position: relative;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #620d74, #561672, #4b1b70, #3f1e6c, #342068, #2b1f60, #231e58, #1c1c4f, #161841, #111433, #0e0e25, #060518);
+  z-index: -1; 
+}
+
+.EmojiPickerReact {
+  background-color: #5a6163 !important;
+  border-radius: 10px !important;
+}
+
+/* SchedulePage.css */
+
+input[type="date"],
+input[type="time"] {
+  position: relative;
+  padding-right: 2rem; 
+}
+
+/* Style and center the calendar/time indicator */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background-color: #62767c;
+  border-radius: 50%;
+  height: 2vh;
+  width: 1vw;
+  position: absolute;
+  right: 0.5rem;       
+  top: 50%;            
+  transform: translateY(-50%);
+  
+
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 600px) {
+  input[type="date"],
+  input[type="time"] {
+    padding-right: 0rem; 
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    height: 2.5vh;  
+    width: 5vw;   
+    right: 0.5rem; 
+  }
+}
