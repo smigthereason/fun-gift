@@ -34,94 +34,100 @@ const About = () => {
           </h1>
         </div>
       </div>
+      
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {/* Step 1 */}
+          <div
+            className="flex flex-col items-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            {/* Image Section - Top on mobile and desktop */}
+            <div className="mb-6">
+              <img
+                className="w-64 h-auto object-cover mx-auto"
+                src={One}
+                alt="Step One"
+              />
+            </div>
 
-      {/* Step 1 */}
-      <div
-        className="relative w-full h-[500px] mx-auto mt-20 flex"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        {/* Left Image Section */}
-        <div className="hidden sm:inline relative w-2/6 h-full rounded-lg overflow-hidden">
-          <img
-            className=" relative left-20 w-80 h-auto object-cover "
-            src={One}
-            alt="Step One"
-          />
+            {/* Text Section - Below image */}
+            <div className="text-center px-4">
+              <Title highlightText="Step" mainText="One" />
+              <h3 className="text-2xl font-semibold mt-2">
+                Choose a Gift Amount
+              </h3>
+              <p className="text-gray-300 text-lg mt-3">
+                Select a value between KES 1,000 and KES 100,000
+              </p>
+            </div>
+
+            {/* Divider - Visible on both mobile and desktop */}
+            <div className="mt-10 w-full flex justify-center md:justify-end"></div>
+          </div>
+
+          {/* Step 2 */}
+          <div
+            className="flex flex-col items-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            {/* Image Section - Top on mobile and desktop */}
+            <div className="mb-6">
+              <img
+                className="w-64 h-auto object-cover mx-auto"
+                src={Two}
+                alt="Step Two"
+              />
+            </div>
+
+            {/* Text Section - Below image */}
+            <div className="text-center px-4">
+              <Title highlightText="Step" mainText="Two" />
+              <h3 className="text-2xl font-semibold mt-2">
+                Personalize Your Gift
+              </h3>
+              <p className="text-gray-300 text-lg mt-3">
+                Add a special message and choose whether you are gifting
+                yourself or someone else.
+              </p>
+            </div>
+
+            {/* Divider - Visible on both mobile and desktop */}
+            <div className="mt-10 w-full flex justify-center md:justify-end"></div>
+          </div>
+
+          {/* Step 3 */}
+          <div
+            className="flex flex-col items-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            {/* Image Section - Top on mobile and desktop */}
+            <div className="mb-6">
+              <img
+                className="w-64 h-auto object-cover mx-auto"
+                src={Three}
+                alt="Step Three"
+              />
+            </div>
+
+            {/* Text Section - Below image */}
+            <div className="text-center px-4">
+              <Title highlightText="Step" mainText="Three" />
+              <h3 className="text-2xl font-semibold mt-2">Send & Redeem</h3>
+              <p className="text-gray-300 text-lg mt-3">
+                The recipient will receive a digital gift card that can be
+                redeemed at our partnered supermarket outlets.
+              </p>
+            </div>
+          </div>
+
+          {/* Desktop connecting lines */}
+          <div className="hidden md:block absolute top-1/2 left-1/3 w-1 h-16 border-r-2 border-white/30"></div>
+          <div className="hidden md:block absolute top-1/2 left-2/3 w-1 h-16 border-r-2 border-white/30"></div>
         </div>
-
-        {/* Right Text Section */}
-        <div className="w-full sm:w-3/6 flex flex-col justify-center p-2 relative sm:left-32 left-2 -top-20 sm:-top-20 sm:text-center">
-          <Title highlightText="Step" mainText="One" />
-          <h3 className="text-2xl">Choose a Gift Amount</h3>
-          <p className="text-gray-300 text-xl mt-4 max-w-full">
-            Select a value between KES 1,000 and KES 100,000
-          </p>
-        </div>
-      </div>
-
-      <div className="flex justify-center -mt-12 sm:mt-12">
-        <div className="line border-b-2 border-white/50 w-32 sm:w-60 -rotate-45 "></div>
-      </div>
-
-      {/*  Step 2 */}
-      <div
-        className="relative w-full max-w-6xl h-[600px] mx-auto mt-20 flex"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        {/* left Text Section */}
-
-        <div className="w-full sm:w-3/6 flex flex-col justify-center p-2 relative -top-20 sm:-top-20 sm:text-center">
-          <Title highlightText="Step" mainText="Two?" />
-          <h3 className="text-2xl">Personalize Your Gift</h3>
-          <p className="text-gray-300 text-xl mt-4 max-w-full">
-            Add a special message and choose whether you’re gifting yourself or
-            someone else.
-          </p>
-        </div>
-        {/* Right Image Section */}
-        <div className="hidden sm:inline relative left-40 top-20 w-2/6 h-full rounded-lg overflow-hidden ">
-          <img
-            className=" relative left-10 w-80 h-auto object-cover "
-            src={Two}
-            alt="Step Two"
-          />
-        </div>
-      </div>
-
-      <div className="flex justify-center -mt-12 sm:mt-12 relative -top-56 sm:top-0">
-        <div className="line border-b-2 border-white/50 w-32 sm:w-60 rotate-45 "></div>
-      </div>
-
-      {/* Step 3 */}
-      <div
-        className="relative w-full h-[600px] mx-auto mt-20 flex"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        {/* Left Image Section */}
-        <div className="hidden sm:inline relative w-2/6 h-full rounded-lg overflow-hidden">
-          <img
-            className=" relative left-20 top-20 w-80 h-auto object-cover "
-            src={Three}
-            alt="Step Three"
-          />
-        </div>
-
-        {/* Right Text Section */}
-        <div className="w-full sm:w-3/6 flex flex-col justify-center p-2 relative sm:left-32 left-2 -top-20 sm:-top-20 sm:text-center">
-          <Title highlightText="Step" mainText="Three" />
-          <h3 className="text-2xl">Send & Redeem</h3>
-          <p className="text-gray-300 text-xl mt-4 max-w-full">
-            The recipient will receive a digital gift card that can be redeemed
-            at our partnered supermarket outlets.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex justify-center -mt-12 sm:mt-12">
-        <div className="line border-b-2 border-white/50 w-32 sm:w-60 -rotate-45 "></div>
       </div>
 
       {/* Additional Section  */}
@@ -161,7 +167,6 @@ const About = () => {
           </ul>
         </div>
       </div>
-
     </div>
   );
 };

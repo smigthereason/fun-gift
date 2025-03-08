@@ -31,7 +31,7 @@ const Layout = () => {
         {/* Close button for mobile sidebar */}
         {isMobileMenuOpen && (
           <button
-            className="ml-auto text-gray-400 sm:hidden"
+            className="ml-auto text-white sm:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <X className="w-6 h-6" />
@@ -92,7 +92,7 @@ const Layout = () => {
               className="text-gray-400"
               onClick={() => setIsMobileMenuOpen(true)}
             >
-              <Menu className="w-10 h-10 relative left-36 text-[#62767c]" />
+              <Menu className="w-10 h-10 relative left-36 text-white" />
             </button>
           </div>
         )}
@@ -100,7 +100,7 @@ const Layout = () => {
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col gap-4 min-w-0 h-11/12">
-        <main className="flex-1 bg-transparent filter backdrop-blur-md border border-[#62767c] rounded-2xl shadow-sm p-4 sm:p-6">
+        <main className="flex-1 h-11/12 bg-transparent filter backdrop-blur-md border border-[#62767c] rounded-2xl shadow-sm p-4 sm:p-6">
           <Outlet />
         </main>
       </div>

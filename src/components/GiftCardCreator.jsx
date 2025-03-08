@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AmountSlider from "./AmountSlider";
 import {
-  CakeIcon,
-  HeartIcon,
+  AcademicCapIcon,
+  ChartBarIcon,
   GiftIcon,
-  CalendarDaysIcon,
+  TrophyIcon,
 } from "@heroicons/react/24/solid";
 
 const GiftCardCreator = () => {
@@ -15,26 +15,26 @@ const GiftCardCreator = () => {
   const [message, setMessage] = useState("");
   const [recipientEmail, setRecipientEmail] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
-  const [selectedTheme, setSelectedTheme] = useState("birthday");
+  const [selectedTheme, setSelectedTheme] = useState("Top Achiever");
 
   const themes = [
     {
-      id: "birthday",
-      name: "Birthday",
+      id: "Top Achiever",
+      name: "Top Achiever",
       color: "bg-purple-500",
-      icon: <CakeIcon className="w-12 h-12 text-white" />,
+      icon: <AcademicCapIcon className="w-12 h-12 text-white" />,
     },
     {
-      id: "valentines",
-      name: "Valentines",
+      id: "Most Improved",
+      name: "Most Improved",
       color: "bg-red-500",
-      icon: <HeartIcon className="w-12 h-12 text-white" />,
+      icon: <ChartBarIcon className="w-12 h-12 text-white" />,
     },
     {
-      id: "anniversary",
-      name: "Anniversary",
+      id: "Sports Award",
+      name: "Sports Award",
       color: "bg-blue-500",
-      icon: <CalendarDaysIcon className="w-12 h-12 text-white" />,
+      icon: <TrophyIcon className="w-12 h-12 text-white" />,
     },
     {
       id: "general",
@@ -90,7 +90,7 @@ const GiftCardCreator = () => {
               onClick={() => setSelectedTheme(theme.id)}
               className={`${theme.color} ${
                 selectedTheme === theme.id ? "ring-4 ring-black" : ""
-              } text-white p-4 rounded-lg transition-all duration-200`}
+              } text-white text-xs sm:text-lg p-4 rounded-lg transition-all duration-200`}
             >
               {theme.name}
             </button>
