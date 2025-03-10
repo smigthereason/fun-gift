@@ -55,13 +55,13 @@ const Navbar = () => {
             }`}>
               Create Card
             </Link>
-            <button className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
+            <Link to="/login" className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
               isScrolled 
                 ? 'bg-purple-600 text-white hover:bg-purple-700' 
                 : 'bg-white text-purple-600 hover:bg-gray-100'
             }`}>
               Login
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
